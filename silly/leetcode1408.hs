@@ -11,3 +11,5 @@ isSubstring substr str  = any id $ map (== substr) formattedStrings
 
 solve [] = []
 solve (x:xs) = if any (isSubstring x) xs then x : solve xs else solve xs
+
+main = print $ solve $ sortedWords wordList
